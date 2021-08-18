@@ -14,7 +14,7 @@ fun Int.totient2() {
 fun totient(primeFactors: List<Pair<Int, Int>>) : Double {
     val (p, m) = primeFactors.first()
    if (primeFactors.tail().isEmpty())
-       return 0.0
+       return 1.0
     return (p - 1) * p.toDouble().pow(m.toInt() - 1) * totient(primeFactors.tail())
 
 }
